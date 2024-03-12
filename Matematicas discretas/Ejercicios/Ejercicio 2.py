@@ -1,3 +1,4 @@
+#Calculador de numeros primos
 def es_primo(numero):
     if numero <= 1:
         return False
