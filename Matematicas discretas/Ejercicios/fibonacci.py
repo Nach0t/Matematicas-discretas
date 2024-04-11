@@ -1,11 +1,11 @@
-def frigonachi(n):
+def fibonacci(n):
     fibonacci_seq = [0, 1] 
     for i in range(2, n):
         next_num = fibonacci_seq[-1] + fibonacci_seq[-2]  
         fibonacci_seq.append(next_num)
     return fibonacci_seq
 
-def frigonachi2(limite):
+def fibonacci2(limite):
     fibonacci_seq = [0, 1]
     n = 2  # Iniciamos desde el tercer término
     while fibonacci_seq[-1] + fibonacci_seq[-2] <= limite:
