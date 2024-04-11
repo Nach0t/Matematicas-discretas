@@ -32,4 +32,3 @@ elif opcion == '2':
         print(num)
 else:
     print("Opción no válida. Por favor, elija 1 o 2.")
-    
