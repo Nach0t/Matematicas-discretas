@@ -1,3 +1,5 @@
+import cmath
+
 # Entrada del número de términos en la función de recurrencia
 funcion = int(input("Ingrese el número de funciones que hay: "))
 
@@ -20,10 +22,13 @@ for i in range(funcion):
     else:
         output += f"- {abs(coeficiente)}f(n-{i+1}) "
 
-print(output)
-
-# Entrada del símbolo para la solución de EDO
-simbolo = input("Ingrese el símbolo de la ecuación: ")
+while True:
+    # Entrada del símbolo para la solución de EDO
+    simbolo = input("Ingrese el símbolo de la ecuación: ")
+    if simbolo.lower() != "c":  # Convierte a minúsculas para comparar y salir si es diferente de "c"
+        break
+    else:
+        print("El símbolo 'C' o 'c' no es válido. Por favor, ingrese otro símbolo.")
 
 # Representación de la EDO utilizando el símbolo ingresado
 output = f"{simbolo}^n = "
@@ -38,38 +43,26 @@ for i in range(funcion):
         output += f"- {abs(coeficiente)}{simbolo}^(n-{i+1})"
 
 print(output)
+print(f"Se multiplica por {simbolo}^(-n+{funcion}) en ambos lados de la ecuación: ")
 
-# Notificación de multiplicación por un factor adicional según la recurrencia
-print(f"Se multiplica por: {simbolo}^(-n+{funcion})")
-
-output = f"{simbolo}^{funcion} = "
-for i in range(funcion):
-    coeficiente = int(lista[i])
-    # Calculamos el exponente para el término actual, que decrece desde el valor máximo 'funcion - 1'
-    exponente_actual = funcion - i - 1
-    if coeficiente >= 0:
-        if i > 0:  # Añade un '+' solo si no es el primer término
-            output += f"+ {coeficiente}{simbolo}^{exponente_actual} "
-        else:
-            output += f"{coeficiente}{simbolo}^{exponente_actual} "
-    else:
-        output += f"- {abs(coeficiente)}{simbolo}^{exponente_actual} "
-
-print(output)
+# Cambio de signo de los coeficientes para la representación final
 output = f"{simbolo}^{funcion} "
 for i in range(funcion):
     coeficiente = int(lista[i])
-    exponente_actual = funcion - i - 1
+    # Cambio de signo
+    coeficiente *= -1
     if coeficiente >= 0:
-        if i > 0:  # Añade un '+' solo si no es el primer término
-            output += f"+ {coeficiente}{simbolo}^{exponente_actual} "
+        if i > 0:
+            output += f"+ {coeficiente}{simbolo}^{funcion-i-1} "
         else:
-            output += f"{coeficiente}{simbolo}^{exponente_actual} "
+            output += f"{coeficiente}{simbolo}^{funcion-i-1} "
     else:
-        output += f"- {abs(coeficiente)}{simbolo}^{exponente_actual} "
+        output += f"- {abs(coeficiente)}{simbolo}^{funcion-i-1} "
 
 # Al final, igualamos la suma de términos a 0
+print(output)
 output += "= 0"
 
-print("Se ordena la funcion: ")
+print("Se ordena la función con cambio de signo: ")
 print(output)
+
