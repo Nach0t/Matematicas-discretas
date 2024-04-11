@@ -65,4 +65,3 @@ output += "= 0"
 
 print("Se ordena la función con cambio de signo: ")
 print(output)
-
