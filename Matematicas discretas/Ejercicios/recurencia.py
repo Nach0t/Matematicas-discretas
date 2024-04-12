@@ -66,6 +66,7 @@ output += "= 0"
 print("Se ordena la función con cambio de signo: ")
 print(output)
 
+# a
 if funcion == 2:
     a = 1
     b = int(lista[0])
@@ -80,11 +81,8 @@ if funcion == 2:
     else:
         print("No hay soluciones reales")
 
-
-
 output = f"{simbolo}(n) = C1({valor1})^n + C2({valor2})^n"
 print(output)
-
 
 # Entrada del número de condiciones iniciales y almacenamiento de las mismas
 condiciones = int(input("Ingrese el número de condiciones iniciales: "))

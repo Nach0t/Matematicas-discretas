@@ -9,5 +9,5 @@ def euclides(a, b):
         a, b = b, r
         valores_a.append(a)
         paso += 1
-    print(f"Los valores usados son {valores_a}, y El MCD es: {a}")
-    return a
+    print(f"Los valores usados son {valores_a}, y el MCD es: {a}")
+    return a, valores_a
