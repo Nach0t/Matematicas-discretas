@@ -21,11 +21,11 @@ opcion = input("¿Qué versión de Fibonacci quieres generar? (1 o 2): ")
 
 if opcion == '1':
     n = int(input("Ingrese cuántos números de Fibonacci quieres ver: "))
-    fib_sequence = frigonachi(n)
+    fib_sequence = fibonacci(n)
     print("Secuencia de Fibonacci:", fib_sequence)
 elif opcion == '2':
     limite = int(input("Ingrese el límite para la secuencia de Fibonacci: "))
-    num = frigonachi2(limite)
+    num = fibonacci2(limite)
     if isinstance(num, tuple):
         print("El número que supera el límite podría estar entre los términos", num[0] + 1, "y", num[1] + 1)
     else:

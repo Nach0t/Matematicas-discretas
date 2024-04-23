@@ -10,7 +10,7 @@ def difanticas(a, b):
     else:
         print("La ecuación no tiene solución.")
 
-    # Pedimos al usuario si desea aplicar Bézout y corregimos la llamada a capitalize()
+    # Pedimos al usuario si desea aplicar Bézout y corregimos la llamada con capitalize
     accion = input("¿Quieres aplicar Bezout?: (Si/No) ").capitalize()
 
     if accion == "Si":
