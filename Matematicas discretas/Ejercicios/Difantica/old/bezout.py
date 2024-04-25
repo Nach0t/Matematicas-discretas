@@ -1,4 +1,3 @@
-#ta malo creo, a ratos funca
 def bezout(valores_a):
     x, y = 1, 0  # Inicialmente para el último valor de a (que es el MCD)
     total_pasos = len(valores_a) - 1

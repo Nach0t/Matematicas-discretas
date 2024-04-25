@@ -6,11 +6,11 @@ def modular(a, b):
         print(f"{a} ≡ {r} (mod {b})")
         return a, b, q, r
     elif b >= 0:
-      print("Queda: ")
-      q = a // b  # Calcula el cociente
-      r = a % b   # Calcula el residuo
-      print(f"{a} ≡ {r} (mod {b})")
-      return a, b, q, r
+        print("Queda: ")
+        q = a // b  # Calcula el cociente
+        r = a % b   # Calcula el residuo
+        print(f"{a} ≡ {r} (mod {b})")
+        return a, b, q, r
 
 # Lectura de entradas
 a = int(input("Ingrese el valor de a: "))
